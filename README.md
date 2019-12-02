@@ -34,3 +34,20 @@ You may keep your repository "private" until prior to submission, but may be ask
 ## Submission & Grading
 
 Each instructor will provided details on their respective requirements.
+
+
+_______________________________________________
+----------------------------------------------
+product[20]
+
+product[1] {
+    id:1
+    name: "Gorilla Glue"
+    image: url
+    discription: long 
+    price: [10.00, 80.00, 140.00]
+    quality: A+ / A+ A++ A+++ Quad
+    strain: indica // indica/sativa/hybryd
+    category: flower
+    science: ["12", "5"] //thc -> cbd
+}
