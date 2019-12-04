@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,700&display=swap');
 body{
     box-sizing: content-box;
     background-color:#5B6C56;
@@ -44,4 +44,45 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 2rem;
+    border-bottom: 1px solid white;
+    margin: 0rem 2rem;
+}
+
+.strains, .quality{
+    margin: 1rem 0rem;
+    text-align: center;
+}
+.strains > li > input[type=checkbox], .quality > li > input[type=checkbox]{
+    opacity:0;
+
+}
+
+.strains > li > input[type=checkbox]:checked + label , .quality > li > input[type=checkbox]:checked + label{
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.strains{
+    border-right: 2px solid white;
+    padding-right: 1px;
+}
+.quality{
+    font-size: 1.5rem;
+}
+
+.search-bar{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    padding-left: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.bar{
+    margin: 1rem 2rem;
+    border-bottom: 1px solid white;
+
 }
