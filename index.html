@@ -14,14 +14,15 @@
   <body>
     <!-- Note: From this point oneward, this document should be considered 100% customizable. The elements and structure below are simply an example template to get you started. Your products and application will have different criteria that will give you the opportunity to customize all aspects of this document to your needs. Use what you need, discard or modify anything that's not directly useful in reaching your end goal. -->
 
-    <header>
+    <header class="banner">
 
-      <button type="button"><span class="fas fa-search"></span></button> 
+
+      <button type="button" class="banner-butt"><span class="fas fa-search"></span></button>
       <!-- Site logo, replace with your own -->
-      <a href="index.html"><img src="img/cannabuss_logo.png" alt="Cannabuss Logo"></a>
+      <a href="index.html" class="center"><img class="logo" src="img/cannabuss_logo.png" alt="Cannabuss Logo"></a>
 
       <!-- Additional functionality or links -->
-      <button><span class="fas fa-shopping-cart"></span></button>
+      <button class="banner-butt"><span class="fas fa-shopping-cart"></span></button>
     
     </header>
 
@@ -29,23 +30,27 @@
       <header>   
         <!-- Filtering product form -->
         <form>
-          <h2>What are you looking for?</h2>
-          <fieldset>
-            <ul>
-              <li><input type="checkbox" name="strain" value="indica" id="indica"> <label for="indica">Indica</label></li>
-              <li><input type="checkbox" name="strain" value="sativa" id="sativa"> <label for="sativa">Sativa</label></li>
-              <li><input type="checkbox" name="strain" value="hybrid" id="hybrid"> <label for=hybrid">Hybrid</label></li>
-            </ul>
-          </fieldset>
+          <h2 class="tittle">What are you looking for?</h2>
 
-          <fieldset>
-            <ol>
-              <li><input type="checkbox" name="quality" value="a+" id="a+"> <label for="a+">A+</label></li>
-              <li><input type="checkbox" name="quality" value="a++" id="a++"> <label for="a++">A++</label></li>
-              <li><input type="checkbox" name="quality" value="a+++" id="a+++"> <label for="a+++">A+++</label></li>
-              <li><input type="checkbox" name="quality" value="quad" id="quad"> <label for="quad">Quad</label></li>
-            </ol>
-          </fieldset>
+          <div class="strain-quality">
+            <fieldset>
+                <ul class="strains">
+                  <li><input type="checkbox" name="strain" value="indica" id="indica"> <label for="indica">Indica</label></li>
+                  <li><input type="checkbox" name="strain" value="sativa" id="sativa"> <label for="sativa">Sativa</label></li>
+                  <li><input type="checkbox" name="strain" value="hybrid" id="hybrid"> <label for="hybrid">Hybrid</label></li>
+                </ul>
+              </fieldset>
+    
+              <fieldset>
+                <ol class="quality">
+                  <li><input type="checkbox" name="quality" value="a+" id="a+"> <label for="a+">A+</label></li>
+                  <li><input type="checkbox" name="quality" value="a++" id="a++"> <label for="a++">A++</label></li>
+                  <li><input type="checkbox" name="quality" value="a+++" id="a+++"> <label for="a+++">A+++</label></li>
+                  <li><input type="checkbox" name="quality" value="quad" id="quad"> <label for="quad">Quad</label></li>
+                </ol>
+              </fieldset>
+          </div>
+          
           <fieldset>
             <ol>
               <li>
@@ -61,17 +66,18 @@
                 </label>
               </li>
             </ol>
+
             <ol>
               <li>
-                <input type="radio" name="price-range" value="1" id="bruh">
-                <label for="a+">
-                  </span>Highest >>>> lowest</span>
+                <input type="radio" name="price-range" value="1" id="high-low">
+                <label for="high-low">
+                  </span>Highest lowest</span>
                 </label>
               </li>
               <li>
-                <input type="radio" name="price-range" value="2" id="quad">
-                <label for="aboveOne">
-                  <span">Lowest >>>> Highest</span>
+                <input type="radio" name="price-range" value="2" id="low-high">
+                <label for="low-high">
+                  <span">Lowest Highest</span>
                 </label>
               </li>
             </ol>
