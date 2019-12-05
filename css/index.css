@@ -254,8 +254,14 @@ body{
 
 .media-icon{
     font-size: 2rem;
-
 }
+.media-icon:hover{
+    font-weight: bold;
+}
+.foot >ul > li> a:hover{
+    text-decoration: underline;
+}
+
 .top{
     padding-bottom: 0.5rem;
 }
