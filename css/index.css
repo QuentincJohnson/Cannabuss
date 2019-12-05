@@ -218,4 +218,51 @@ body{
 .cart-add > button:hover{
     font-weight: bold;
 }
-/*margin: 0rem 2rem 2rem 2rem;*/
+
+.pages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 2rem;
+}
+.pages > div{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;;
+    font-weight: bold;
+}
+
+.pages > div > a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    border-top: 2px solid white;
+}
+
+.foot{
+    background-color:#442424;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom:0.5rem ;
+}
+.foot >ul{
+    display: inline-block;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.media-icon{
+    font-size: 2rem;
+
+}
+.top{
+    padding-bottom: 0.5rem;
+}
+.copy{
+    display: block;
+    background-color: #442424;
+    font-size: 0.6rem;
+    padding-bottom: 0.2rem ;
+    padding-left: 0.2rem;
+}
