@@ -48,23 +48,25 @@ body{
     margin: 0rem 2rem;
 }
 
-.strains, .quality{
+.strains, .quality, .category, .range{
     margin: 1rem 0rem;
     text-align: center;
 }
-.strains > li > input[type=checkbox], .quality > li > input[type=checkbox]{
+.strains > li > input[type=checkbox], .quality > li > input[type=checkbox],
+.category > li > input[type=radio],.range > li > input[type=radio]{
     opacity:0;
 
 }
 
-.strains > li > input[type=checkbox]:checked + label , .quality > li > input[type=checkbox]:checked + label{
+.strains > li > input[type=checkbox]:checked + label , .quality > li > input[type=checkbox]:checked + label,
+.category > li > input[type=radio]:checked + label{
     text-decoration: underline;
     font-weight: bold;
 
 }
 
 .strains{
-    border-right: 2px solid white;
+    border-right: 1px solid white;
     padding-right: 1px;
 }
 .quality{
@@ -86,3 +88,134 @@ body{
     border-bottom: 1px solid white;
 
 }
+
+.category{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid white;
+    margin: 0rem 2rem;
+
+}
+
+.range{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 1.05rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+}
+
+.range > li > input[type=radio] + label {
+    box-sizing: border-box;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+  
+}
+.range > li > input[type=radio]:checked + label{
+    background-color: #442424 ;
+}
+
+.product-img{
+    display: block;
+    margin: 4rem auto;
+    width: 50%;
+}
+
+.product-name{
+      text-align: center;
+      font-size: 2.5rem;
+      border-bottom: 1px solid white;
+      margin: 0rem 3rem;
+}
+
+.discription{
+      text-align: center;
+      margin: 1rem 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid white;
+}
+
+.science{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 1rem 3rem;
+      border-bottom: 1px solid white;
+      padding-bottom: 1rem;
+}
+
+.science > li > p{
+      text-align: center;
+}
+
+.grade{
+      font-size: 2rem;
+}
+
+.price-size{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 0rem 2rem 2rem 2rem;
+    padding-bottom: 1rem;
+}
+
+.price{
+    font-size: 1.2em;
+}
+.size{
+    display: inline-block;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.size > label{
+    position: relative;
+    justify-self: center;
+}
+
+
+.size {
+    margin: 0rem;
+    background-color: #442424;
+}
+
+.size > [type=radio]{
+    position: absolute;
+    opacity: 0;
+}
+.size > [type=radio]:hover + label{
+    text-decoration: underline;
+}
+
+.size > [type=radio]:checked + label{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cart-add  {
+    display: block;
+    margin: 0rem 2rem;
+    margin-top: -2.5rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 1rem;
+}
+
+.cart-add > button{
+    width: 100%;
+    margin: 0rem auto;
+    box-sizing: border-box;
+    background-color:#442424 ;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+}
+.cart-add > button:hover{
+    font-weight: bold;
+}
+/*margin: 0rem 2rem 2rem 2rem;*/

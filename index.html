@@ -7,7 +7,6 @@
     <meta name="description" content="[A short description]">
     <meta name="author" content="[Your Name]">
     <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/16bdba87f0.js" crossorigin="anonymous"></script>
   </head>
@@ -25,7 +24,7 @@
       <button class="banner-butt"><span class="fas fa-shopping-cart"></span></button>
     
     </header>
-
+ 
     <main>
       <header>   
         <!-- Filtering product form -->
@@ -55,32 +54,32 @@
           </div>
           
           <fieldset>
-            <ol>
+            <ol class="category">
               <li>
-                <input type="radio" name="category" value="1" id="bruh">
-                <label for="a+">
+                <input type="radio" name="category" value="1" id="flower">
+                <label for="flower">
                   <span>Flower</span>
                 </label>
               </li>
               <li>
-                <input type="radio" name="category" value="2" id="quad">
-                <label for="aboveOne">
+                <input type="radio" name="category" value="2" id="concentrate">
+                <label for="concentrate">
                   <span">Concentrate</span>
                 </label>
               </li>
             </ol>
 
-            <ol>
+            <ol class="range">
               <li>
                 <input type="radio" name="price-range" value="1" id="high-low">
                 <label for="high-low">
-                  </span>Highest lowest</span>
+                  </span>$Highest lowest</span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="price-range" value="2" id="low-high">
                 <label for="low-high">
-                  <span">Lowest Highest</span>
+                  <span">$Lowest Highest</span>
                 </label>
               </li>
             </ol>
@@ -95,39 +94,48 @@
           <!-- Product 1 -->
           <article class="product">
             <header>
-              <img src="img/product.jpg" alt="Product Image">
+              <img src="img/gorilla-glue.png" class="product-img" alt="Gorilla Glue alt">
             </header>
-            <h3>Gorilla Glue</h3>
-            <p>Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel</p>
+            <h3 class="product-name">Gorilla Glue</h3>
+            <p class="discription">Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel</p>
+           
             <form>
-              <ul>
+              
+              <ul class="science">
                 <li>
                   <p>Flower <span>:</span></p>
                   <p>Indica</p>
                 </li>
-                <li><span>A+</span></li>
+                <li><p class="grade">A+</p></li>
                 <li>
                   <p>THC: <strong>12</strong>%</p>
                   <p>CBD: <strong>5</strong>%</p>
                 </li>
               </ul>
-              <fieldset>
-                <legend>120</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="gram"> <span>1G</span></label></li>
-                  <li><label><input type="radio" name="colour" value="eighth"> <span>1/8 OZ</span></label></li>
-                  <li><label><input type="radio" name="colour" value="half"> <span>1/2 OZ</span></label></li>
-                </ul>
-              </fieldset>
+
+              <section class="price-size">
+                  <div><legend class="price">$120.00</legend></div>
+
+                  <div class="size">
+                    <input type="radio" name="colour" value="gram" id="gram" > 
+                    <label for="gram">1G</label>
+                  </div>
+                  <div class="size">
+                    <input type="radio" name="colour" value="eighth" id="eighth">
+                    <label for="eighth">1/8 OZ</label>
+                  </div>
+                  <div class="size">
+                   <input type="radio" name="colour" value="half" id="half" > 
+                   <label for="half" >1/2 OZ</label>
+                  </div>
+              </section>
+              <div class="cart-add"><button type="button">Add To Cart</button></div>
             </form>
           </article>
         </div>
-
-        
       </section>
 
       <footer>
-        <p>1-5 of 20 products found</p>
         <nav aria-label="Product Pages">
           <a href="#" aria-label="Previous page">prev</a>
           <div>1/4</div>
