@@ -4,7 +4,7 @@ let products =  [19]
 products[0] = {
     id:1,
     name: "Gorilla Glue",
-    image: ,
+    image: "/img/1.png",
     discription:"Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel",
     price: [9.00,30.00,70],
     quality: "A+",
@@ -15,7 +15,7 @@ products[0] = {
 products[1] = {
     id:2,
     name: "Zkittlez",
-    image:,
+    image:"/img/2.png",
     discription: "Zkittlez is an indica-dominant mix of Grape Ape and Grapefruit that is crossed with another undisclosed strain to produce this candy-flavored cannabis bred by 3rd Gen Family and Terp Hogz. This award-winning combination took 1st Place at the 2016 Emerald Cup and 1st Place Indica at the 2015 Cannabis Cups in San Francisco and in Michigan" ,
     price: [9.00,30.00,70],
     quality: "A+",
@@ -26,7 +26,7 @@ products[1] = {
 products[2] = {
     id:3,
     name: "Jack Herer",
-    image: ,
+    image: "/img/3.png",
     discription: "Jack Herer is a sativa-dominant cannabis strain that has gained as much renown as its namesake, the marijuana activist and author of The Emperor Wears No Clothes. Combining a Haze hybrid with a Northern Lights #5 and Shiva Skunk cross, Sensi Seeds created Jack Herer hoping to capture both cerebral elevation and heavy resin production. Its rich genetic background gives rise to several different variations of Jack Herer",
     price: [9.00,30.00,70],
     quality: "A+",
@@ -37,7 +37,7 @@ products[2] = {
 products[3] = {
     id:4,
     name: "Blueberry",
-    image: ,
+    image: "/img/4.png",
     discription: "A true A-List cannabis strain, Blueberry’s legendary status soared to new heights after claiming the High Times’ Cannabis Cup 2000 for Best Indica. The long history of the strain goes back to the late 1970s when American breeder DJ Short was working with a variety of exotic landrace strains.",
     price: [9.00,30.00,70],
     quality: "A+",
@@ -48,7 +48,7 @@ products[3] = {
 products[4] = {
     id:5,
     name:"Blue Dream",
-    image: ,
+    image: "/img/5.png",
     discription:"Blue Dream, a sativa-dominant hybrid originating in California, has achieved legendary status among West Coast strains. Crossing Blueberry with Haze, Blue Dream balances full-body relaxation with gentle cerebral invigoration. Novice and veteran consumers alike enjoy the level effects of Blue Dream, which ease you gently into a calm euphoria.",
     price: [9.00,30.00,70],
     quality: "A+",
@@ -59,176 +59,271 @@ products[4] = {
 products[5] = {
     id:6,
     name:"Acaupulco Glod",
-    image:,
+    image:"/img/6.png",
     discription:"One of the most well-known strains, Acapulco Gold has been likened to dinner at a five-star restaurant. This strain comes from the area in and around Acapulco, Mexico, and its orange hairs resemble a gold nugget, with gold, green, and brown colors and plenty of resin on the buds. An aroma of burnt toffee lingers when the bud is broken up." ,
     price: [10.00, 80.00, 140.00],
     quality: "A++",
     strain: "Sativa",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["12", "2"] //thc -> cbd
 }
 products[6] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
+    id:7,
+    name: "Grape Ape",
+    image: "/img/7.png",
+    discription: "Grape Ape, propagated by Apothecary Genetics and Barney’s Farm, is a mostly indica strain that crosses Mendocino Purps, Skunk, and Afghani. Named for its distinct grape-like smell, this indica is known for providing carefree relaxation that can help soothe pain, stress, and anxiety.",
     price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain:"A++",
+    quality:"A++",
+    strain: "Indica",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["10", "6"] //thc -> cbd
 }
 products[7] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
+    id:8,
+    name: "Gelato",
+    image: "/img/8.png",
+    discription: "Gelato (also referred to as \"Larry Bird\") is a tantalizing hybrid cannabis strain from Cookie Fam and Sherbinski, following in the footsteps of its parents Sunset Sherbet and Thin Mint GSC. This Bay Area, California native gets its name from the fruity, dessert-like aroma, a common genetic thread among the Cookie family." ,
     price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: "A++",
+    quality:"A++",
+    strain: "Hybrid",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["13", "3"]//thc -> cbd
 }
 products[8] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
+    id:9,
+    name: "Maui Wowie",
+    image: "/img/9.png",
+    discription: "Maui Wowie (not Maui Waui) is a classic sativa whose tropical flavors and stress-relieving qualities will float you straight to the shores of Hawaii where this strain originally comes from. Since its beginnings in the island’s volcanic soil, Maui Wowie has spread across the world to bless us with its sweet pineapple flavors and high-energy euphoria.",
     price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain:"A++",
+    quality:"A++",
+    strain:"Sativa",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["14", "0"] //thc -> cbd
 }
 products[9] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:10,
+    name:"Nuken",
+    image: "/img/10.png",
+    discription: "The mostly indica Nuken is a Canadian strain bred by combining genetics from Kish (a cross of two Shishkaberry parents) and God Bud. Her even-keeled effects are delivered alongside a sweet, earthy aroma of fresh herbs and grass. While undeniably strong, Nuken typically leaves you functional enough to still enjoy hobbies and the company of friends.",
+    price: [11.00, 85.00, 150.00],
+    quality:"A+++",
+    strain: "Indica",
     category:"Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["16", "2"] //thc -> cbd
 }
 products[10] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:11,
+    name: "AK-47",
+    image: "/img/11.png",
+    discription: "Don't let its intense name fool you: AK-47 will leave you relaxed and mellow. This sativa-dominant strain mixes Colombian, Mexican, Thai, and Afghani varieties, bringing together a complex blend of flavors and effects. AK-47 may deliver a steady and long-lasting cerebral buzz that will keep you mentally alert and engaged in creative or social activities.",
+    price: [11.00, 85.00, 150.00],
+    quality: "A+++",
+    strain: "Hybrid",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["15", "7"] //thc -> cbd
 }
 products[11] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:12,
+    name: "Amnesia",
+    image: "/img/12.png",
+    discription:"Amnesia is typically a sativa-dominant cannabis strain with some variation between breeders. Skunk, Cinderella 99, and Jack Herer are some of Amnesia’s genetic forerunners, passing on uplifting, creative, and euphoric effects ideal for treating mood disorders. Growers should expect a 9-10 week flowering period with moderate yields.",
+    price: [11.00, 85.00, 150.00],
+    quality: "A+++",
+    strain: "Sativa",
     category:"Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["17", "1"] //thc -> cbd
 }
 products[12] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:13,
+    name: "3X Crazy",
+    image: "/img/13.png",
+    discription: "Also known as Optimus Prime, the indica-dominant 3X Crazy is a three-way cross between OG Kush, Bubba Kush, and Granddaddy Purple. Its aroma is comprised of sweet grape, spicy pepper, and earthy notes passed on by its Bubba Kush parent. This indica can cover the consumer in soothing full-body effects, but not before a brief phase of clear-headed cerebral sizzle.",
+    price: [11.00, 85.00, 150.00],
+    quality: "A+++",
+    strain: "Indica",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["13", "9"] //thc -> cbd
 }
 products[13] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:14,
+    name: "3 Kings",
+    image: "/img/14.png",
+    discription: "The 3 Kings marijuana strain, a holy trinity of Headband, Sour Diesel, and OG Kush, is a sativa-dominant hybrid and genetic masterpiece. Sour tanginess reek from the sage green buds, and its frosty coat gives you a fair warning of the 3 Kings’ potency.",
+    price: [12.00, 90.00, 160.00],
+    quality:"Quad",
+    strain: "Hybrid",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["19", "3"] //thc -> cbd
 }
 products[14] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:15,
+    name: "Royal Haze",
+    image: "/img/15.png",
+    discription: "Royal Haze (or Royale Haze) by Dinafem Seeds is a mostly sativa strain bred from Skunk, Haze, and Northern Lights genetics. Taking after her Haze parent, this sativa inherits a spicy citrus flavor and buzzing, energetic effects that keep you alert and productive throughout the day.",
+    price: [13.00, 100.00, 180.00],
+    quality: "Quad",
+    strain: "Sativa",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["21", "0"] //thc -> cbd
 }
 products[15] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
+    id:16,
+    name: "Afghani",
+    image: "/img/16.png",
+    discription: "Afghani is a heavy indica strain named after its geographic origin, where the earliest varieties of cannabis are believed to have grown. Breeders worldwide have come to treasure Afghani for its heavy resin production which is passed on genetically. With a sweet, earthy aroma, Afghani delivers a deep, sedating relaxation and euphoria. ",
+    price: [12.00, 95.00, 170.00],
+    quality:"Quad", 
+    strain: "Indica",
     category: "Flower",
-    science: ["", ""] //thc -> cbd
+    science: ["18", "6"] //thc -> cbd
 }
 products[16] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
-    category: ,
-    science: ["", ""] //thc -> cbd
+    id:17,
+    name: "white Rhino",
+    image: "/img/17.png",
+    discription: "White Rhino is a hybrid of White Widow and an unknown North American indica strain, resulting a bushy and stout plant. This strain is said to descend from cultivars sourced from Afghanistan, Brazil, and India. White Rhino's high THC content makes it a popular choice among consumers looking for heavy-handed relaxation and symptom relief.",
+    price: [65.00, .175, 360.00],
+    quality: "A+++",
+    strain: "Indica",
+    category: "Concentrate",
+    science: ["44", "10"] //thc -> cbd
 }
 products[17] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
-    category: ,
-    science: ["", ""] //thc -> cbd
+    id:18,
+    name: "Clementine",
+    image: "/img/18.png",
+    discription: "Clementine is a sweet, citrus flavored sativa hybrid that combines Tangie with Lemon Skunk genetics. The concentrated live resin of Clementine from Crocket Family Farms took home 2nd Place for the Best Sativa Concentrate at the 2015 Cannabis Cup in Michigan.",
+    price: [65.00, .175, 360.00],
+    quality:"A+++",
+    strain:"Sativa",
+    category: "Concentrate",
+    science: ["47", "16"] //thc -> cbd
 }
 products[18] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
-    category: ,
-    science: ["", ""] //thc -> cbd
+    id:19,
+    name: "SFV OG",
+    image: "/img/19.png",
+    discription:"SFV OG by Cali Connection is a sativa-dominant hybrid that is great for patients who need strong pain relief but don’t want to be stuck on the couch. As the name indicates, this OG Kush relative originates from California’s San Fernando Valley. Although their names are barely distinguishable, SFV OG Kush is actually the Afghani-crossed child to SFV OG. ",
+    price: [65.00, .175, 360.00],
+    quality: "Quad",
+    strain: "Hybrid",
+    category: "Concentrate",
+    science: ["55", "30"] //thc -> cbd
 }
 products[19] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
-    category: ,
-    science: ["", ""] //thc -> cbd
+    id:20,
+    name:"Big Smooth",
+    image: "/img/14.png",
+    discription:"Big Smooth by Exotic Genetix is a flavorful cross of OG Blueberry and Cookies and Cream. This indica-dominant hybrid offers a delicious terpene profile that smells sweet and doughy, like blueberry pancakes. Big Smooth grows bushy, medium-tall plants and has a flowering time of 55 to 66 days. Enjoy Big Smooth for its delicious flavor and euphoric, middleweight sedation.",
+    price: [65.00, .175, 360.00],
+    quality: "Quad",
+    strain: "Hybrid",
+    category: "Concentrate",
+    science: ["62", "24"] //thc -> cbd
 }
-products[20] = {
-    id:1,
-    name: ,
-    image: ,
-    discription: ,
-    price: [10.00, 80.00, 140.00],
-    quality: ,
-    strain: ,
-    category: ,
-    science: ["", ""] //thc -> cbd
+
+
+let search = document.getElementById("search");
+
+
+console.log(products)
+
+products.forEach(element => {
+    document.getElementById("content").innerHTML +=
+    `<div id="products">
+          <!-- Products layout-->
+          <article class="product">
+            <header>
+              <img src="${element.image}" class="product-img" alt="Gorilla Glue alt">
+            </header>
+            <h3 class="product-name">Gorilla Glue</h3>
+            <p class="discription">${element.discription}</p>
+           
+            <form>
+              <ul class="science">
+                <li>
+                  <p>${element.category}:</p>
+                  <p>${element.strain}</p>
+                </li>
+                <li><p class="grade">${element.quality}</p></li>
+                <li>
+                  <p>THC: <strong>${element.science[0]}</strong>%</p>
+                  <p>CBD: <strong>${element.science[1]}</strong>%</p>
+                </li>
+              </ul>
+
+              <section class="price-size">
+                  <div><legend class="price">${element.price[0]}</legend></div>
+
+                  <div class="size">
+                    <input type="radio" name="colour" value="gram" id="gram" > 
+                    <label for="gram">1G</label>
+                  </div>
+                  <div class="size">
+                    <input type="radio" name="colour" value="eighth" id="eighth">
+                    <label for="eighth">1/8 OZ</label>
+                  </div>
+                  <div class="size">
+                   <input type="radio" name="colour" value="half" id="half" > 
+                   <label for="half" >1/2 OZ</label>
+                  </div>
+              </section>
+              <div class="cart-add"><button type="button">Add To Cart</button></div>
+            </form>
+          </article>
+        </div>`
+
+    
+});
+
+function refine() {
+    
+    
+    
 }
+
+search.addEventListener("click",refine)
+
+/*<div id="products">
+<!-- Products layout-->
+<article class="product">
+  <header>
+    <img src="" class="product-img" alt="Gorilla Glue alt">
+  </header>
+  <h3 class="product-name">Gorilla Glue</h3>
+  <p class="discription">Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel</p>
+ 
+  <form>
+    
+    <ul class="science">
+      <li>
+        <p>Flower <span>:</span></p>
+        <p>Indica</p>
+      </li>
+      <li><p class="grade">A+</p></li>
+      <li>
+        <p>THC: <strong>12</strong>%</p>
+        <p>CBD: <strong>5</strong>%</p>
+      </li>
+    </ul>
+
+    <section class="price-size">
+        <div><legend class="price">$120.00</legend></div>
+
+        <div class="size">
+          <input type="radio" name="colour" value="gram" id="gram" > 
+          <label for="gram">1G</label>
+        </div>
+        <div class="size">
+          <input type="radio" name="colour" value="eighth" id="eighth">
+          <label for="eighth">1/8 OZ</label>
+        </div>
+        <div class="size">
+         <input type="radio" name="colour" value="half" id="half" > 
+         <label for="half" >1/2 OZ</label>
+        </div>
+    </section>
+    <div class="cart-add"><button type="button">Add To Cart</button></div>
+  </form>
+</article>
+</div>*/
