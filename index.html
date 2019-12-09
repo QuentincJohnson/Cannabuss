@@ -26,65 +26,69 @@
     </header>
  
     <main>
-      <header>   
+      <header class="pop">   
         <!-- Filtering product form -->
-        <form>
-          <h2 class="tittle">What are you looking for?</h2>
-          <div class="bar">
-              <input type="search" name="search-bar" id="search-bar" value="Search" class="search-bar">
-          </div>
-         
-          <div class="strain-quality">
-            <fieldset>
-                <ul class="strains">
-                  <li><input type="checkbox" name="strain" value="indica" id="indica"> <label for="indica">Indica</label></li>
-                  <li><input type="checkbox" name="strain" value="sativa" id="sativa"> <label for="sativa">Sativa</label></li>
-                  <li><input type="checkbox" name="strain" value="hybrid" id="hybrid"> <label for="hybrid">Hybrid</label></li>
-                </ul>
-              </fieldset>
-    
-              <fieldset>
-                <ol class="quality">
-                  <li><input type="checkbox" name="quality" value="a+" id="a+"> <label for="a+">A+</label></li>
-                  <li><input type="checkbox" name="quality" value="a++" id="a++"> <label for="a++">A++</label></li>
-                  <li><input type="checkbox" name="quality" value="a+++" id="a+++"> <label for="a+++">A+++</label></li>
-                  <li><input type="checkbox" name="quality" value="quad" id="quad"> <label for="quad">Quad</label></li>
-                </ol>
-              </fieldset>
-          </div>
+        <div class="dropdown">
           
-          <fieldset>
-            <ol class="category">
-              <li>
-                <input type="radio" name="category" value="1" id="flower">
-                <label for="flower">
-                  <span>Flower</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="category" value="2" id="concentrate">
-                <label for="concentrate">
-                  <span">Concentrate</span>
-                </label>
-              </li>
-            </ol>
+          <input type="checkbox" id="dropmen" class="dropbox">
+          <label for="dropmen" class="tittle">What are you looking for?</h2>
+          <form class="dropdown-content">
+            <div class="bar">
+                <input type="search" name="search-bar" id="search-bar" value="Search" class="search-bar">
+            </div>
+            
+            <div class="strain-quality">
+              <fieldset>
+                  <ul class="strains">
+                    <li><input type="checkbox" name="strain" value="indica" id="indica"> <label for="indica">Indica</label></li>
+                    <li><input type="checkbox" name="strain" value="sativa" id="sativa"> <label for="sativa">Sativa</label></li>
+                    <li><input type="checkbox" name="strain" value="hybrid" id="hybrid"> <label for="hybrid">Hybrid</label></li>
+                  </ul>
+                </fieldset>
+      
+                <fieldset>
+                  <ol class="quality">
+                    <li><input type="checkbox" name="quality" value="a+" id="a+"> <label for="a+">A+</label></li>
+                    <li><input type="checkbox" name="quality" value="a++" id="a++"> <label for="a++">A++</label></li>
+                    <li><input type="checkbox" name="quality" value="a+++" id="a+++"> <label for="a+++">A+++</label></li>
+                    <li><input type="checkbox" name="quality" value="quad" id="quad"> <label for="quad">Quad</label></li>
+                  </ol>
+                </fieldset>
+            </div>
+            
+            <fieldset>
+              <ol class="category">
+                <li>
+                  <input type="radio" name="category" value="1" id="flower">
+                  <label for="flower">
+                    <span>Flower</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="category" value="2" id="concentrate">
+                  <label for="concentrate">
+                    <span">Concentrate</span>
+                  </label>
+                </li>
+              </ol>
 
-            <ol class="range">
-              <li>
-                <input type="radio" name="price-range" value="1" id="high-low">
-                <label for="high-low">
-                  </span>$Highest lowest</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="price-range" value="2" id="low-high">
-                <label for="low-high">
-                  <span">$Lowest Highest</span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-        </form>
+              <ol class="range">
+                <li>
+                  <input type="radio" name="price-range" value="1" id="high-low">
+                  <label for="high-low">
+                    </span>$Highest lowest</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="price-range" value="2" id="low-high">
+                  <label for="low-high">
+                    <span">$Lowest Highest</span>
+                  </label>
+                </li>
+              </ol>
+            </fieldset>
+          </form>
+        </div>
       </header>
 
       <section id="content">

@@ -34,16 +34,53 @@ body{
 }
 
 .tittle{
+    border: 0;
+    padding: 0;
+    display: block;
     border-bottom: 2px solid white;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin: -0.5rem 2rem 0rem 2rem;
+    background-color: transparent;
+    color: white;
 }
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    display:none;
+    opacity: 0;
+    animation: load 1s backwards;
+
+}
+
+.dropbox:checked .dropdown-content::after{
+    position: absolute;
+    background-color :#5B6C56;
+    animation: load 0.5s forwards;
+    display:block;
+    translate: transform 0.5s;
+    border-bottom: 2px solid white;
+    border-bottom-width: 80%;
+    
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
 
 .strain-quality{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-bottom: 1px solid white;
     margin: 0rem 2rem;
 }
@@ -70,7 +107,7 @@ body{
     padding-right: 1px;
 }
 .quality{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .search-bar{
@@ -272,3 +309,4 @@ body{
     padding-bottom: 0.2rem ;
     padding-left: 0.2rem;
 }
+

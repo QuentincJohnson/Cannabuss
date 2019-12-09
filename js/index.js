@@ -227,7 +227,7 @@ let search = document.getElementById("search");
 
 
 function fill(x) {
-  products.forEach(element => {
+  x.forEach(element => {
     document.getElementById("content").innerHTML +=
     `<div id="products">
           <!-- Products layout-->
@@ -273,23 +273,21 @@ function fill(x) {
         </div>`
 });}
 
+fill(products)
 
-window.onloa = (fill(products))
       
 function refine() {
-    
+  document.getElementById("content").innerHTML = ""
     let copy = products.slice(0);
 
     if (document.getElementById("high-low").checked == true) {
-      copy = copy.sort((a,b) =>  a-b)
+      copy = copy.sort((a,b) =>  b.price[0]-a.price[0])
       console.log(copy)
-    } else if (document.getElementById("low-high").checked == true){
-      alert("lowest to highest")
-      copy = copy.sort((a,b) =>  b-a)
+    } if (document.getElementById("low-high").checked == true){
+      copy = copy.sort((a,b) =>  a.price[0]-b.price[0])
+      console.log(copy)
     }
-
     fill(copy);
-    
 }
 
 search.addEventListener("click", refine)
