@@ -292,7 +292,7 @@ body{
 
 
 
-.tittle:hover ~ .dropdown-content, .dropdown-content:hover{
+.tittle:hover ~ .dropdown-content,.tittle:active ~ .dropdown-content,.dropdown-content:hover{
     width: 96%;
     position: absolute;
     background-color :#5B6C56;
