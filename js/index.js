@@ -4,7 +4,7 @@ let products =  [19]
 products[0] = {
     id:1,
     name: "Gorilla Glue",
-    image: "QuentincJohnson/Cannabuss/img/1.png",
+    image: "img/1.png",
     discription:"Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel",
     price: [9.00.toFixed(2),30.00.toFixed(2),70.00.toFixed(2)],
     quality: "A+",
@@ -15,7 +15,7 @@ products[0] = {
 products[1] = {
     id:2,
     name: "Zkittlez",
-    image:"/img/2.png",
+    image:"img/2.png",
     discription: "Zkittlez is an indica-dominant mix of Grape Ape and Grapefruit that is crossed with another undisclosed strain to produce this candy-flavored cannabis bred by 3rd Gen Family and Terp Hogz. This award-winning combination took 1st Place at the 2016 Emerald Cup and 1st Place Indica at the 2015 Cannabis Cups in San Francisco and in Michigan" ,
     price: [9.00.toFixed(2),30.00.toFixed(2),70.00.toFixed(2)],
     quality: "A+",
