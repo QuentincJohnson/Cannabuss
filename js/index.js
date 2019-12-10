@@ -4,7 +4,7 @@ let products =  [19]
 products[0] = {
     id:1,
     name: "Gorilla Glue",
-    image: "/img/1.png",
+    image: "QuentincJohnson/Cannabuss/img/1.png",
     discription:"Original Glue (GG4), developed by GG Strains, is a potent hybrid strain that delivers heavy-handed euphoria and relaxation, leaving you feeling “glued” to the couch. Its chunky, resin-covered buds fill the room with pungent earthy and sour aromas inherited from its parent strains, Chem’s Sister, Sour Dubb, and Chocolate Diesel",
     price: [9.00.toFixed(2),30.00.toFixed(2),70.00.toFixed(2)],
     quality: "A+",
@@ -252,7 +252,7 @@ function fill(x) {
               </ul>
 
               <section class="price-size">
-                  <div><legend class="price">${element.price[0]}</legend></div>
+                  <div><legend class="price">$${element.price[0]}</legend></div>
 
                   <div class="size">
                     <input type="radio" name="colour" value="gram" id="gram" > 
