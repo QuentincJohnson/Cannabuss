@@ -279,15 +279,137 @@ fill(products)
 function refine() {
   document.getElementById("content").innerHTML = ""
     let copy = products.slice(0);
+    let qualityList = [];
+    let strainList = [];
+    let catList = []
 
-    if (document.getElementById("high-low").checked == true) {
-      copy = copy.sort((a,b) =>  b.price[0]-a.price[0])
-      console.log(copy)
-    } if (document.getElementById("low-high").checked == true){
-      copy = copy.sort((a,b) =>  a.price[0]-b.price[0])
-      console.log(copy)
+    let qualityBased = []
+    let catBased = []
+    let unsorted = [];
+
+    copy.forEach(element => {
+      qualityList.push(element.quality)
+      strainList.push(element.strain)
+      catList.push(element.category)
+      
+    });
+
+
+    //showing flower or concentrate
+    if (document.getElementById("flower").checked == true){
+      copy.forEach(element => {
+        if (element.category == "Flower") {
+          catBased.push(element)
+        } 
+      });
     }
-    fill(copy);
+    if (document.getElementById("concentrate").checked == true){
+      copy.forEach(element => {
+        if (element.category == "Concentrate") {
+          catBased.push(element)
+        } 
+      });
+    }
+
+    console.log(catBased)
+
+    //SORTING Quality
+
+    if (document.getElementById("a+").checked == true){
+      catBased.forEach(element => {
+        if (element.quality == "A+"){
+          console.log(element.quality)
+          qualityBased.push(element)
+        }
+      });
+    }
+
+    if (document.getElementById("a++").checked == true){
+      catBased.forEach(element => {
+        if (element.quality == "A++"){
+          console.log(element.quality)
+          qualityBased.push(element)
+        }
+      });
+    }
+    if (document.getElementById("a+++").checked == true){
+      catBased.forEach(element => {
+        if (element.quality == "A+++"){
+          console.log(element.quality)
+          qualityBased.push(element)
+        }
+      });
+    }
+    if (document.getElementById("quad").checked == true){
+      catBased.forEach(element => {
+        if (element.quality == "Quad"){
+          console.log(element.quality)
+          qualityBased.push(element)
+        }
+      });
+    }
+    
+    console.log(qualityBased)
+
+    //STRAINS SORTING
+    for (let index = 0; index < qualityBased.length; index++) {
+      const element = qualityBased[index];
+      if (document.getElementById("indica").checked == true) {
+        if (element.strain == "Indica") {
+          unsorted.push(element)
+        } 
+      }
+    }
+
+    for (let index = 0; index < qualityBased.length; index++) {
+      const element = qualityBased[index];
+      if (document.getElementById("sativa").checked == true) {
+        if (element.strain == "Sativa") {
+          unsorted.push(element)
+        } 
+      }
+    }
+
+    for (let index = 0; index < qualityBased.length; index++) {
+      const element = qualityBased[index];
+      if (document.getElementById("hybrid").checked == true) {
+        if (element.strain == "Hybrid") {
+          unsorted.push(element)
+        } 
+      }
+    }
+
+
+
+    let sorted = []
+    if (document.getElementById("flower").checked == true || document.getElementById("concentrate").checked == true) {
+      alert("bruh")
+      sorted =  Array.from(new Set(catBased));
+    } 
+    if (document.getElementById("a+").checked == true || document.getElementById("a++").checked == true || document.getElementById("a+++").checked == true || document.getElementById("quad").checked == true) {
+      sorted =  Array.from(new Set(qualityBased));
+    }
+    if (document.getElementById("indica").checked == true || document.getElementById("sativa").checked == true || document.getElementById("hybrid").checked == true){
+      sorted =  Array.from(new Set(unsorted));
+    } 
+    
+    console.log(copy)
+    console.log(unsorted)
+    console.log(sorted)
+
+
+  
+
+
+    //sorting price
+    if (document.getElementById("high-low").checked == true) {
+      sorted = sorted.sort((a,b) =>  b.price[0]-a.price[0])
+      console.log(sorted)
+    } if (document.getElementById("low-high").checked == true){
+      sorted = sorted.sort((a,b) =>  a.price[0]-b.price[0])
+      console.log(sorted)
+    }
+    fill(sorted);
 }
 
 search.addEventListener("click", refine)
@@ -334,4 +456,18 @@ search.addEventListener("click", refine)
     <div class="cart-add"><button type="button">Add To Cart</button></div>
   </form>
 </article>
-</div>*/
+</div>
+
+
+
+for (let index = 0; index < copy.length; index++) {
+      const element = copy[index];
+      if (document.getElementById("a+").checked == true) {
+        if (element.quality != "A+") {
+          console.log(element.quality)
+          copy.splice(element)
+        } 
+      }
+    }
+
+*/
