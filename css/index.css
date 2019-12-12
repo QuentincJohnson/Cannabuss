@@ -304,6 +304,14 @@ body{
     
 }
 
+.result-error{
+    text-align: center;
+    font-size: 5rem;
+    padding: 11rem;
+
+}
+
+
 @keyframes load{
     0%{
         opacity: 0;

@@ -310,8 +310,6 @@ function refine() {
   }
 
 
- 
-
   document.getElementById("content").innerHTML = ""
   let copy = products.slice(0);
   let qualityList = [];
@@ -328,6 +326,24 @@ function refine() {
     catList.push(element.category)
     
   });
+
+  let input = document.getElementById("search-bar").value;
+  let result = []
+  copy.forEach(element =>{
+
+    if (input == ""){
+      console.log('nothing entered')
+      result = copy;
+    } else if (element.name.toLowerCase().includes(input.toLowerCase())) {
+      console.log(element.name)
+      result.push(element)
+      console.log(input)
+   } 
+  })
+
+  copy = result
+  console.log(copy)
+
 
 
   //showing flower or concentrate
@@ -447,6 +463,11 @@ function refine() {
 
 
 
+
+  if (sorted.length == 0) {
+    document.getElementById("content").innerHTML = 
+    '<p class="result-error">Sory, No Results Found</p>'
+  }
 
   fill(sorted);
 
