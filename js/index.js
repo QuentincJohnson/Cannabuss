@@ -273,143 +273,187 @@ function fill(x) {
         </div>`
 });}
 
+
 fill(products)
 
       
 function refine() {
+
+
+  if (
+    document.getElementById("flower").checked == false &&
+    document.getElementById("concentrate").checked == false
+  ) {
+    document.getElementById("flower").checked = true; // defaults to flower
+  }
+
+  if (
+    document.getElementById("indica").checked == false &&
+    document.getElementById("sativa").checked == false &&
+    document.getElementById("hybrid").checked == false
+  ) {
+    document.getElementById("indica").checked = true ;
+    document.getElementById("sativa").checked = true ;
+    document.getElementById("hybrid").checked = true;
+  }
+
+  if (
+    document.getElementById("a+").checked == false &&
+    document.getElementById("a++").checked == false &&
+    document.getElementById("a+++").checked == false &&
+    document.getElementById("quad").checked == false 
+  ){
+    document.getElementById("a+").checked = true;
+    document.getElementById("a++").checked = true ;
+    document.getElementById("a+++").checked = true;
+    document.getElementById("quad").checked = true;
+  }
+
+
+ 
+
   document.getElementById("content").innerHTML = ""
-    let copy = products.slice(0);
-    let qualityList = [];
-    let strainList = [];
-    let catList = []
+  let copy = products.slice(0);
+  let qualityList = [];
+  let strainList = [];
+  let catList = []
 
-    let qualityBased = []
-    let catBased = []
-    let unsorted = [];
+  let qualityBased = []
+  let catBased = []
+  let unsorted = [];
 
+  copy.forEach(element => {
+    qualityList.push(element.quality)
+    strainList.push(element.strain)
+    catList.push(element.category)
+    
+  });
+
+
+  //showing flower or concentrate
+  if (document.getElementById("flower").checked == true){
     copy.forEach(element => {
-      qualityList.push(element.quality)
-      strainList.push(element.strain)
-      catList.push(element.category)
-      
+      if (element.category == "Flower") {
+        catBased.push(element)
+      } 
     });
+  }
+  if (document.getElementById("concentrate").checked == true){
+    copy.forEach(element => {
+      if (element.category == "Concentrate") {
+        catBased.push(element)
+      } 
+    });
+  }
 
+  console.log(catBased)
 
-    //showing flower or concentrate
-    if (document.getElementById("flower").checked == true){
-      copy.forEach(element => {
-        if (element.category == "Flower") {
-          catBased.push(element)
-        } 
-      });
-    }
-    if (document.getElementById("concentrate").checked == true){
-      copy.forEach(element => {
-        if (element.category == "Concentrate") {
-          catBased.push(element)
-        } 
-      });
-    }
+  //SORTING Quality
 
-    console.log(catBased)
-
-    //SORTING Quality
-
-    if (document.getElementById("a+").checked == true){
-      catBased.forEach(element => {
-        if (element.quality == "A+"){
-          console.log(element.quality)
-          qualityBased.push(element)
-        }
-      });
-    }
-
-    if (document.getElementById("a++").checked == true){
-      catBased.forEach(element => {
-        if (element.quality == "A++"){
-          console.log(element.quality)
-          qualityBased.push(element)
-        }
-      });
-    }
-    if (document.getElementById("a+++").checked == true){
-      catBased.forEach(element => {
-        if (element.quality == "A+++"){
-          console.log(element.quality)
-          qualityBased.push(element)
-        }
-      });
-    }
-    if (document.getElementById("quad").checked == true){
-      catBased.forEach(element => {
-        if (element.quality == "Quad"){
-          console.log(element.quality)
-          qualityBased.push(element)
-        }
-      });
-    }
-    
-    console.log(qualityBased)
-
-    //STRAINS SORTING
-    for (let index = 0; index < qualityBased.length; index++) {
-      const element = qualityBased[index];
-      if (document.getElementById("indica").checked == true) {
-        if (element.strain == "Indica") {
-          unsorted.push(element)
-        } 
+  if (document.getElementById("a+").checked == true){
+    catBased.forEach(element => {
+      if (element.quality == "A+"){
+        console.log(element.quality)
+        qualityBased.push(element)
       }
-    }
+    });
+  }
 
-    for (let index = 0; index < qualityBased.length; index++) {
-      const element = qualityBased[index];
-      if (document.getElementById("sativa").checked == true) {
-        if (element.strain == "Sativa") {
-          unsorted.push(element)
-        } 
+  if (document.getElementById("a++").checked == true){
+    catBased.forEach(element => {
+      if (element.quality == "A++"){
+        console.log(element.quality)
+        qualityBased.push(element)
       }
-    }
-
-    for (let index = 0; index < qualityBased.length; index++) {
-      const element = qualityBased[index];
-      if (document.getElementById("hybrid").checked == true) {
-        if (element.strain == "Hybrid") {
-          unsorted.push(element)
-        } 
+    });
+  }
+  if (document.getElementById("a+++").checked == true){
+    catBased.forEach(element => {
+      if (element.quality == "A+++"){
+        console.log(element.quality)
+        qualityBased.push(element)
       }
-    }
-
-
-
-    let sorted = []
-    if (document.getElementById("flower").checked == true || document.getElementById("concentrate").checked == true) {
-      alert("bruh")
-      sorted =  Array.from(new Set(catBased));
-    } 
-    if (document.getElementById("a+").checked == true || document.getElementById("a++").checked == true || document.getElementById("a+++").checked == true || document.getElementById("quad").checked == true) {
-      sorted =  Array.from(new Set(qualityBased));
-    }
-    if (document.getElementById("indica").checked == true || document.getElementById("sativa").checked == true || document.getElementById("hybrid").checked == true){
-      sorted =  Array.from(new Set(unsorted));
-    } 
-    
-    console.log(copy)
-    console.log(unsorted)
-    console.log(sorted)
-
-
+    });
+  }
+  if (document.getElementById("quad").checked == true){
+    catBased.forEach(element => {
+      if (element.quality == "Quad"){
+        console.log(element.quality)
+        qualityBased.push(element)
+      }
+    });
+  }
   
+  console.log(qualityBased)
 
-
-    //sorting price
-    if (document.getElementById("high-low").checked == true) {
-      sorted = sorted.sort((a,b) =>  b.price[0]-a.price[0])
-      console.log(sorted)
-    } if (document.getElementById("low-high").checked == true){
-      sorted = sorted.sort((a,b) =>  a.price[0]-b.price[0])
-      console.log(sorted)
+  //STRAINS SORTING
+  for (let index = 0; index < qualityBased.length; index++) {
+    const element = qualityBased[index];
+    if (document.getElementById("indica").checked == true) {
+      if (element.strain == "Indica") {
+        unsorted.push(element)
+      } 
     }
-    fill(sorted);
+  }
+
+  for (let index = 0; index < qualityBased.length; index++) {
+    const element = qualityBased[index];
+    if (document.getElementById("sativa").checked == true) {
+      if (element.strain == "Sativa") {
+        unsorted.push(element)
+      } 
+    }
+  }
+
+  for (let index = 0; index < qualityBased.length; index++) {
+    const element = qualityBased[index];
+    if (document.getElementById("hybrid").checked == true) {
+      if (element.strain == "Hybrid") {
+        unsorted.push(element)
+      } 
+    }
+  }
+
+
+
+  let sorted = []
+  if (document.getElementById("flower").checked == true || document.getElementById("concentrate").checked == true) {
+    alert("bruh")
+    sorted =  Array.from(new Set(catBased));
+  } 
+  if (document.getElementById("a+").checked == true || document.getElementById("a++").checked == true || document.getElementById("a+++").checked == true || document.getElementById("quad").checked == true) {
+    sorted =  Array.from(new Set(qualityBased));
+  }
+  if (document.getElementById("indica").checked == true || document.getElementById("sativa").checked == true || document.getElementById("hybrid").checked == true){
+    sorted =  Array.from(new Set(unsorted));
+  } 
+  
+  console.log(copy)
+  console.log(unsorted)
+  console.log(sorted)
+
+
+
+
+
+  //sorting price
+  if (document.getElementById("high-low").checked == true) {
+    sorted = sorted.sort((a,b) =>  b.price[0]-a.price[0])
+    console.log(sorted)
+  } if (document.getElementById("low-high").checked == true){
+    sorted = sorted.sort((a,b) =>  a.price[0]-b.price[0])
+    console.log(sorted)
+  }
+
+
+
+
+  fill(sorted);
+
+}
+
+function name(params) {
+  
 }
 
 search.addEventListener("click", refine)
@@ -468,6 +512,25 @@ for (let index = 0; index < copy.length; index++) {
           copy.splice(element)
         } 
       }
+    }
+
+
+
+
+
+        if (
+      document.getElementById("high-low").checked == false && document.getElementById("low-high").checked == false &&
+      document.getElementById("flower").checked == false && document.getElementById("concentrate").checked == false &&
+      document.getElementById("indica").checked == false && 
+      document.getElementById("sativa").checked == false &&
+      document.getElementById("hybrid").checked == false &&
+      document.getElementById("a+").checked == false &&
+      document.getElementById("a++").checked == false &&
+      document.getElementById("a+++").checked == false &&
+      document.getElementById("quad").checked == false
+      ) { 
+        alert("super bruh")
+      sorted = copy;
     }
 
 */
