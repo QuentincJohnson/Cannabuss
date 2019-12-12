@@ -225,19 +225,27 @@ products[19] = {
 
 let search = document.getElementById("search");
 
-
+/*  Function: fill
+    Parameters: array 
+    Return: none
+    Description:   Fills in the html section with the arrays content  */
 function fill(x) {
+
   x.forEach(element => {
+
     document.getElementById("content").innerHTML +=
     `<div id="products">
           <!-- Products layout-->
-          <article class="product">
-            <header>
+          <article class="product desktop">
+            <header class="">
               <img src="${element.image}" class="product-img" alt="Gorilla Glue alt">
             </header>
-            <h3 class="product-name">${element.name}</h3>
-            <p class="discription">${element.discription}</p>
-           
+
+            <div class="align">
+                <h3 class="product-name">${element.name}</h3>
+                <p class="discription">${element.discription}</p>
+            </div>
+
             <form>
               <ul class="science">
                 <li>
@@ -274,9 +282,12 @@ function fill(x) {
 });}
 
 
-fill(products)
+fill(products)//base fill for default load
 
-      
+  /* Function: refine 
+    Parameters: none
+    Return: none
+    Description: filters products based on filters chosen      */
 function refine() {
 
 
@@ -288,7 +299,7 @@ function refine() {
   }
 
   if (
-    document.getElementById("indica").checked == false &&
+    document.getElementById("indica").checked == false && //checking if nothings filled so it can fill it with everything
     document.getElementById("sativa").checked == false &&
     document.getElementById("hybrid").checked == false
   ) {
@@ -310,7 +321,7 @@ function refine() {
   }
 
 
-  document.getElementById("content").innerHTML = ""
+  document.getElementById("content").innerHTML = "" //reset inner html
   let copy = products.slice(0);
   let qualityList = [];
   let strainList = [];
@@ -327,6 +338,7 @@ function refine() {
     
   });
 
+  //search bar logic
   let input = document.getElementById("search-bar").value;
   let result = []
   copy.forEach(element =>{
@@ -346,7 +358,7 @@ function refine() {
 
 
 
-  //showing flower or concentrate
+  // flower or concentrate
   if (document.getElementById("flower").checked == true){
     copy.forEach(element => {
       if (element.category == "Flower") {
@@ -431,10 +443,9 @@ function refine() {
   }
 
 
-
+//removing duplicates
   let sorted = []
   if (document.getElementById("flower").checked == true || document.getElementById("concentrate").checked == true) {
-    alert("bruh")
     sorted =  Array.from(new Set(catBased));
   } 
   if (document.getElementById("a+").checked == true || document.getElementById("a++").checked == true || document.getElementById("a+++").checked == true || document.getElementById("quad").checked == true) {
@@ -463,7 +474,7 @@ function refine() {
 
 
 
-
+//handles when no results are found
   if (sorted.length == 0) {
     document.getElementById("content").innerHTML = 
     '<p class="result-error">Sory, No Results Found</p>'
@@ -473,13 +484,15 @@ function refine() {
 
 }
 
-function name(params) {
-  
-}
 
+//event listner 
 search.addEventListener("click", refine)
 
-/*<div id="products">
+/*   
+
+important snippets of code that wasnt used or could be used
+
+<div id="products">
 <!-- Products layout-->
 <article class="product">
   <header>
